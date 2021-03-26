@@ -1,12 +1,12 @@
-import { makeStyles, Typography, Button } from "@material-ui/core";
+import { useState } from "react";
 
+import { makeStyles, Typography, Button } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
-import MessageIcon from "@material-ui/icons/ChatBubbleOutlineOutlined";
-import { Translate, TranslateTwoTone } from "@material-ui/icons";
+import MessageIcon from "@material-ui/icons/ChatBubbleOutline";
 
-const useStyles = makeStyles((theme) => ({
+export const useStylesSignIn = makeStyles((theme) => ({
   wrapper: {
     display: "flex",
     height: "100vh",
@@ -68,10 +68,20 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 45,
     marginTop: 20,
   },
+  loginSideField: {
+    marginBottom: 18,
+  },
 }));
 
 const SignIn = () => {
-  const classes = useStyles();
+  const classes = useStylesSignIn();
+
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
   return (
     <div className={classes.wrapper}>
       <section className={classes.blueSide}>
@@ -119,7 +129,12 @@ const SignIn = () => {
           >
             Sign up
           </Button>
-          <Button variant="outlined" color="primary" fullWidth>
+          <Button
+            onClick={handleClickOpen}
+            variant="outlined"
+            color="primary"
+            fullWidth
+          >
             Login
           </Button>
         </div>
