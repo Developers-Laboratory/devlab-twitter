@@ -84,7 +84,7 @@ export const useStylesSignIn = makeStyles((theme) => ({
   },
 }));
 
-const SignIn: React.FC = (): React.ReactElement => {
+export const SignIn: React.FC = (): React.ReactElement => {
   const classes = useStylesSignIn();
 
   const [visibleModal, setVisibleModal] = useState<"signIn" | "signUp">();
@@ -169,7 +169,7 @@ const SignIn: React.FC = (): React.ReactElement => {
                   className={classes.loginSideField}
                   autoFocus
                   id="email"
-                  label="Your email"
+                  label="Email"
                   type="email"
                   fullWidth
                 />
@@ -248,5 +248,3 @@ const SignIn: React.FC = (): React.ReactElement => {
     </div>
   );
 };
-
-export default SignIn;
