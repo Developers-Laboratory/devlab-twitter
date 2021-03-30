@@ -6,7 +6,7 @@ import {
 } from "@material-ui/core";
 
 import CloseIcon from "@material-ui/icons/Close";
-import { useStylesSignIn } from "../../pages/SignIn";
+import { useStylesSignIn } from "../pages/SignIn";
 
 interface ModalBlockProps {
   title: string;
@@ -16,7 +16,7 @@ interface ModalBlockProps {
   onClose: () => void;
 }
 
-const ModalBlock: React.FC<ModalBlockProps> = ({
+export const ModalBlock: React.FC<ModalBlockProps> = ({
   title,
   children,
   onClose,
@@ -36,5 +36,3 @@ const ModalBlock: React.FC<ModalBlockProps> = ({
     </Dialog>
   );
 };
-
-export default ModalBlock;

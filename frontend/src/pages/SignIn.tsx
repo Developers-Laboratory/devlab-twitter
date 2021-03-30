@@ -12,7 +12,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
 import MessageIcon from "@material-ui/icons/ChatBubbleOutline";
-import ModalBlock from "../components/ModalBlock";
+import { ModalBlock } from "../components/ModalBlock";
 
 export const useStylesSignIn = makeStyles((theme) => ({
   wrapper: {
